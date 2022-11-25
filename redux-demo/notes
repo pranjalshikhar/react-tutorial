@@ -1,7 +1,7 @@
 *Redux is a predictable state container for JavaScript applications.*
 [Manage the state of your application in a predictable way, redux can help you.]
 
-1. It is for JAvaScript applications.
+1. It is for JavaScript applications.
 - Redux is not tied to React
 - Can be used with Angular, Vue, and with Vanilla JavaScript.
 - Redux is a library for JavaScript applications.
