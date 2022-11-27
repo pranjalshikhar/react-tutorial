@@ -1,2 +1,2 @@
 # React Tutorial
-<img src="https://wallpapercave.com/dwp1x/wp4923991.png"/>
+<img src="https://raw.githubusercontent.com/pranjalshikhar/react-tutorial/master/naruto-react.jpg?token=GHSAT0AAAAAABYQ7ZMDBE7LX577SFKRIVMSY4DVPXA"/>
