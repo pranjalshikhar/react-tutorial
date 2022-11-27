@@ -97,3 +97,11 @@ Responsibilities -
 - It is suggested to extend Redux with custom functionality.
 - It provides the third-party extension point between dispatching an action, and the moment it reaches the reducer.
 - Use middleware for logging, crash reporting, performing asynchronous tasks, etc. 
+
+
+
+[React-Redux+Hooks]
+React-Redux pattern,
+- Action creators, reducers, provide the store and connect the components.
+- components can access state and dispatch actions.
+- React Redux v7.1, Subscribe to store and dispatch actions without connect().
