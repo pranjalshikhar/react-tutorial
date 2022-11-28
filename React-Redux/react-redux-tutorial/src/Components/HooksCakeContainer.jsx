@@ -7,7 +7,7 @@ function HooksCakeContainer() {
   const dispatch = useDispatch();
   return (
     <div>
-      <h2 style={{ color: "blue" }}>Number of Cakes: {numOfCakes}</h2>
+      <h2 style={{ color: "#66A6FF" }}>Number of Cakes: {numOfCakes}</h2>
       <button onClick={() => dispatch(buyCake())}>Buy Cake</button>
     </div>
   );

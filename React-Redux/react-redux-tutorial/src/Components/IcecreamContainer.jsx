@@ -5,7 +5,9 @@ import { connect } from "react-redux";
 const IcecreamContainer = (props) => {
   return (
     <div>
-      <h2>Number of Icecreams: {props.numOfIcecream}</h2>
+      <h2 style={{ color: "#96c93d" }}>
+        Number of Icecreams: {props.numOfIcecream}
+      </h2>
       <button onClick={props.buyIcecream}>Buy Icecream</button>
     </div>
   );

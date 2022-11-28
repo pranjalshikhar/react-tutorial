@@ -7,7 +7,9 @@ const HokksIcecreamContainer = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <h2 style={{ color: "blue" }}>Number of Icecreams: {numOfIcecreams}</h2>
+      <h2 style={{ color: "#66A6FF" }}>
+        Number of Icecreams: {numOfIcecreams}
+      </h2>
       <button onClick={() => dispatch(buyIcecream())}>Buy Icecreams</button>
     </div>
   );
