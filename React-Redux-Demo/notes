@@ -23,6 +23,12 @@
 - React-Redux is a library that provides bindings to use react and Redux together in an application.
 
 
+[When-To-Use-Redux-?]
+- You have large amounts of application state that are needed in many places in the app.
+- The app state is updated frequently over time.
+- The logic to update that state may be complex.
+- The app has a medium or large-sized codebase, and might be worked on by many people.
+
 
 
 [Three-Core-Concepts]
@@ -105,3 +111,12 @@ React-Redux pattern,
 - Action creators, reducers, provide the store and connect the components.
 - components can access state and dispatch actions.
 - React Redux v7.1, Subscribe to store and dispatch actions without connect().
+
+
+
+Redux is great but it has few shortcomings,
+- Configuring Redux in an app seems complicated.
+- In addition to Redux, a lot of other packages have to be installed to get Redux to do something useful.
+- Redux requires too much boilerplate code.
+
+*Redux Toolkit* serves as an abstraction over Redux. It hides the difficult parts ensuring you have a good developer experience.

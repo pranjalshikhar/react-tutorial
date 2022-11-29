@@ -21,10 +21,10 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (state, ownProps) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   const dispatchFunction = ownProps.cake
-    ? () => dispatchFunction(buyCake())
-    : () => dispatchFunction(buyIcecream());
+    ? () => dispatch(buyCake())
+    : () => dispatch(buyIcecream());
 
   return {
     dispatchItem: dispatchFunction,
