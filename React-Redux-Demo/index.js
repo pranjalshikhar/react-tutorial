@@ -8,18 +8,31 @@ const logger = reduxLogger.createLogger();
 
 const BUY_CAKE = "BUY_CAKE";
 const BUY_ICECREAMS = "BUY_ICECREAMS";
+const RESTOCKED_CAKE = "RESTOCKED_CAKE";
+const RESTOCKED_ICECREAM = "RESTOCKED_ICECREAM";
 
 function buyCake() {
   return {
     type: BUY_CAKE,
-    info: "First Redux Action - CAKE",
+  };
+}
+
+function restockCake() {
+  return {
+    type: RESTOCKED_CAKE,
   };
 }
 
 function buyIcecreams() {
   return {
     type: BUY_ICECREAMS,
-    info: "Second Redux Action - ICECREAM",
+  };
+}
+
+function restockIceCream(qty = 1) {
+  return {
+    type: RESTOCKED_ICECREAM,
+    payload: qty,
   };
 }
 
@@ -62,7 +75,11 @@ const cakeReducer = (state = initialCakeState, action) => {
         ...state,
         numOfCakes: state.numOfCakes - 1,
       };
-
+    case RESTOCKED_CAKE:
+      return {
+        ...state,
+        numOfCakes: state.numOfCakes + 1,
+      };
     default:
       return state;
   }
@@ -75,7 +92,16 @@ const icecreamReducer = (state = initialIcecreamState, action) => {
         ...state,
         numOfIcecreams: state.numOfIcecreams - 1,
       };
-
+    case RESTOCKED_ICECREAM:
+      return {
+        ...state,
+        numOfIcecreams: state.numOfIcecreams + action.payload,
+      };
+    case BUY_CAKE:
+      return {
+        ...state,
+        numOfIcecreams: state.numOfIcecreams - 1,
+      };
     default:
       return state;
   }
@@ -100,13 +126,12 @@ const unsubscribeBothItems = store.subscribe(() => {
 });
 
 store.dispatch(buyCake());
-console.log();
+store.dispatch(buyIcecreams());
 store.dispatch(buyCake());
-console.log();
 store.dispatch(buyIcecreams());
-console.log();
-store.dispatch(buyIcecreams());
-console.log();
+store.dispatch(restockCake());
+store.dispatch(restockIceCream(5));
+
 unsubscribe();
 // unsubscribeBothItems();
 // unsubscribeIceCream();
